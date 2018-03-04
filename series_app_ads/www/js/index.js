@@ -38,7 +38,7 @@ var app = {
   ref.executeScript({
     code: "document.getElementsByTagName('html')[0].innerHTML"
   }, function(html) {
-    alert(html);
+
     showBannerFunc();
 showInterstitialFunc();
   });
@@ -99,7 +99,7 @@ function initAd(){
                 overlap: true, // banner will overlap webview 
                 offsetTopBar: false, // set to true to avoid ios7 status bar overlap 
                 isTesting: false, // receiving test ad 
-                autoShow: true // auto show interstitial ad when loaded 
+                autoShow: false // auto show interstitial ad when loaded 
             });
  
             registerAdEvents();
