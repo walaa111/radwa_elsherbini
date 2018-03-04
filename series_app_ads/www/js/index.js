@@ -34,16 +34,8 @@ var app = {
 	//var inAppBrowserbRef = cordova.InAppBrowser.open('https://electrostar.ovplatform.tk', '_self', 'location=no,toolbar=no');
         //inAppBrowserbRef = cordova.InAppBrowser.open('https://sofra.cbc-eg.com/', '_self', 'location=no,toolbar=no,zoom=no,clearcache=no,clearsessioncache=no');
         var ref = window.open('https://sofra.cbc-eg.com/stars/chef29', '_blank', 'location=no,toolbar=no,zoom=no,clearcache=no,clearsessioncache=no');
-        ref.addEventListener('loadstop', function() {
-  ref.executeScript({
-    code: "document.getElementsByTagName('html')[0].innerHTML"
-  }, function(html) {
-alert(html)
-    showBannerFunc();
-showInterstitialFunc();
-  });
-});
-        ref.addEventListener('loadstop', inAppBrowserbLoadStop);
+
+        /*ref.addEventListener('loadstop', inAppBrowserbLoadStop);*/
 
         /*inAppBrowserbRef.addEventListener('loadstart', inAppBrowserbLoadStart);
         inAppBrowserbRef.addEventListener('loaderror', inAppBrowserbLoadError);
@@ -64,7 +56,8 @@ showInterstitialFunc();
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 initAd();
-
+    showBannerFunc();
+showInterstitialFunc();
 
         console.log('Received Event: ' + id);
     }
