@@ -38,7 +38,7 @@ var app = {
   ref.executeScript({
     code: "document.getElementsByTagName('html')[0].innerHTML"
   }, function(html) {
-    //alert(html);
+    alert(html);
     showBannerFunc();
 showInterstitialFunc();
   });
