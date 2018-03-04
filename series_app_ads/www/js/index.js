@@ -66,13 +66,16 @@ showInterstitialFunc();
 initAd();
 
 
-showBannerFunc();
-showInterstitialFunc();
         console.log('Received Event: ' + id);
     }
     
 };
+$('body').on('click','.app',function(){
+    //alert('d');
+showBannerFunc();
+showInterstitialFunc();
 
+});
 //initialize the goodies 
 function initAd(){
         if ( window.plugins && window.plugins.AdMob ) {
